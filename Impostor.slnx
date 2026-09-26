@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Impostor.Core/Impostor.Core.csproj" />
+    <Project Path="src/Impostor.Web/Impostor.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Impostor.Core.Tests/Impostor.Core.Tests.csproj" />
+  </Folder>
+</Solution>
