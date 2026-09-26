@@ -4,9 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Impostor</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Impostor</h1>
-  <p>It works! Hot reload is working.</p>
+  <main>
+    <h1>Impostor</h1>
+
+    <section id="setup-screen" class="screen">
+      <h2>Players</h2>
+      <div class="row">
+        <input id="name-input" data-testid="name-input" placeholder="Player name" maxlength="20">
+        <button id="add-player-btn" data-testid="add-player-btn">Add</button>
+      </div>
+      <ul id="player-list" data-testid="player-list"></ul>
+
+      <h2>Category</h2>
+      <select id="category-select" data-testid="category-select"></select>
+
+      <p id="setup-error" class="error" data-testid="setup-error"></p>
+      <button id="start-btn" data-testid="start-btn" class="primary">Start game</button>
+    </section>
+
+    <section id="pass-screen" class="screen hidden">
+      <p>Pass the phone to</p>
+      <h2 id="pass-name" data-testid="pass-name"></h2>
+      <button id="reveal-btn" data-testid="reveal-btn" class="primary">Tap to see your card</button>
+    </section>
+
+    <section id="card-screen" class="screen hidden">
+      <div id="role-card" data-testid="role-card" class="card"></div>
+      <button id="hide-btn" data-testid="hide-btn" class="primary">Hide and pass</button>
+    </section>
+
+    <section id="play-screen" class="screen hidden">
+      <p>Everyone has seen their card.</p>
+      <h2><span id="first-player" data-testid="first-player"></span> goes first</h2>
+      <p>Take turns saying one word about the secret word, then vote out loud.</p>
+      <button id="reveal-impostor-btn" data-testid="reveal-impostor-btn" class="primary">Reveal the impostor</button>
+    </section>
+
+    <section id="results-screen" class="screen hidden">
+      <p>The impostor was</p>
+      <h2 id="result-impostor" data-testid="result-impostor"></h2>
+      <p>The word was <strong id="result-word" data-testid="result-word"></strong></p>
+      <button id="play-again-btn" data-testid="play-again-btn" class="primary">Play again</button>
+      <button id="change-players-btn" data-testid="change-players-btn" class="secondary">Change players</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
